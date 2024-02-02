@@ -37,6 +37,7 @@ wp-includes/class-wp-block.php
 wp-includes/bookmark-template.php
 wp-includes/class-wp-customize-panel.php
 wp-includes/class-wp-user-query.php
+wp-includes/class-wp-block-bindings-registry.php
 wp-includes/rest-api/search/class-wp-rest-search-handler.php
 wp-includes/rest-api/search/class-wp-rest-term-search-handler.php
 wp-includes/rest-api/search/class-wp-rest-post-search-handler.php
@@ -247,6 +248,11 @@ wp-includes/Requests/library/Requests.php
 wp-includes/class-wp-http-requests-hooks.php
 wp-includes/class-wp-comment.php
 wp-includes/functions.wp-scripts.php
+wp-includes/l10n/class-wp-translations.php
+wp-includes/l10n/class-wp-translation-controller.php
+wp-includes/l10n/class-wp-translation-file-php.php
+wp-includes/l10n/class-wp-translation-file-mo.php
+wp-includes/l10n/class-wp-translation-file.php
 wp-includes/class-walker-nav-menu.php
 wp-includes/default-widgets.php
 wp-includes/PHPMailer/Exception.php
@@ -356,6 +362,7 @@ wp-includes/block-patterns/query-large-title-posts.php
 wp-includes/block-patterns/query-standard-posts.php
 wp-includes/block-patterns/query-medium-posts.php
 wp-includes/block-patterns/query-grid-posts.php
+wp-includes/block-bindings.php
 wp-includes/category-template.php
 wp-includes/functions.php
 wp-includes/sodium_compat/composer.json
@@ -585,6 +592,7 @@ wp-includes/js/dist/commands.js
 wp-includes/js/dist/patterns.js
 wp-includes/js/dist/components.min.js
 wp-includes/js/dist/edit-site.js
+wp-includes/js/dist/interactivity-router.js
 wp-includes/js/dist/preferences.min.js
 wp-includes/js/dist/server-side-render.js
 wp-includes/js/dist/annotations.js
@@ -608,12 +616,14 @@ wp-includes/js/dist/block-directory.js
 wp-includes/js/dist/edit-site.min.js
 wp-includes/js/dist/media-utils.min.js
 wp-includes/js/dist/data.min.js
+wp-includes/js/dist/interactivity-router.min.js
 wp-includes/js/dist/keyboard-shortcuts.min.js
 wp-includes/js/dist/html-entities.min.js
 wp-includes/js/dist/element.js
 wp-includes/js/dist/warning.min.js
 wp-includes/js/dist/dom.min.js
 wp-includes/js/dist/wordcount.js
+wp-includes/js/dist/interactivity-router.asset.php
 wp-includes/js/dist/list-reusable-blocks.min.js
 wp-includes/js/dist/redux-routine.min.js
 wp-includes/js/dist/api-fetch.js
@@ -665,8 +675,10 @@ wp-includes/js/dist/dom-ready.min.js
 wp-includes/js/dist/data.js
 wp-includes/js/dist/primitives.js
 wp-includes/js/dist/components.js
+wp-includes/js/dist/vendor/wp-polyfill-importmap.min.js
 wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js
 wp-includes/js/dist/vendor/wp-polyfill-inert.js
+wp-includes/js/dist/vendor/wp-polyfill-importmap.js
 wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js
 wp-includes/js/dist/vendor/lodash.js
 wp-includes/js/dist/vendor/react.js
@@ -725,6 +737,7 @@ wp-includes/js/dist/format-library.js
 wp-includes/js/dist/private-apis.min.js
 wp-includes/js/dist/undo-manager.min.js
 wp-includes/js/dist/editor.min.js
+wp-includes/js/dist/interactivity-router.min.asset.php
 wp-includes/js/dist/edit-widgets.min.js
 wp-includes/js/dist/style-engine.min.js
 wp-includes/js/dist/block-library.js
@@ -1050,6 +1063,7 @@ wp-includes/template-loader.php
 wp-includes/class-wp-network-query.php
 wp-includes/class-wp-comment-query.php
 wp-includes/error-protection.php
+wp-includes/interactivity-api.php
 wp-includes/class-wp-error.php
 wp-includes/class-walker-page.php
 wp-includes/template-canvas.php

@@ -25,6 +25,7 @@ tests/integration/Espo/User/AclTest.php
 tests/integration/Espo/Portal/AclTest.php
 tests/integration/Espo/LeadCapture/LeadCaptureTest.php
 tests/integration/Espo/Extension/GeneralTest.php
+tests/integration/Espo/Role/ServiceTest.php
 tests/integration/Espo/Export/ExportTest.php
 tests/integration/Espo/Tools/Activities/ComposeEmailAddressListTest.php
 tests/integration/Espo/Tools/App/MetadataTest.php
@@ -69,6 +70,7 @@ tests/integration/Espo/Core/FulltextIndex/CheckCreatedIndexTest.php
 tests/integration/Espo/Core/Job/JobTest.php
 tests/integration/Espo/Actions/ActionTest.php
 tests/integration/Espo/Actions/MassActionTest.php
+tests/integration/Espo/Password/RecoveryTest.php
 tests/integration/Espo/ORM/QueryTest.php
 tests/integration/Espo/ORM/EntityManagerTest.php
 tests/integration/Espo/ORM/RepositoryTest.php
@@ -723,6 +725,7 @@ frontend/less/espo/misc/fontawesome/fontawesome/_bordered-pulled.less
 frontend/less/espo/misc/fontawesome/fontawesome/_variables.less
 frontend/less/espo/misc/fontawesome/fontawesome/_screen-reader.less
 frontend/less/espo/misc/fontawesome/fontawesome.less
+frontend/less/espo/misc/wysiwyg.less
 frontend/less/espo/misc/intl-tel-input/intlTelInput.less
 frontend/less/espo/misc/selectize/custom.less
 frontend/less/espo/misc/selectize/plugins/remove_button.less
@@ -822,6 +825,7 @@ frontend/less/espo/elements/table.less
 frontend/less/espo/elements/placement.less
 frontend/less/espo/elements/grid.less
 frontend/less/espo/elements/buttons.less
+frontend/less/espo/elements/alert.less
 frontend/less/espo/elements/record.less
 frontend/less/espo/elements/animation.less
 frontend/less/espo/elements/site.less
@@ -1404,6 +1408,7 @@ client/src/views/role/record/table.js
 client/src/views/role/record/list.js
 client/src/views/role/list.js
 client/src/views/role/modals/add-field.js
+client/src/views/role/fields/permission.js
 client/src/views/base.js
 client/src/views/event/fields/name-for-history.js
 client/src/views/stream/message.js
@@ -1909,6 +1914,7 @@ client/src/views/admin/link-manager/modals/edit.js
 client/src/views/admin/link-manager/fields/foreign-link-entity-type-list.js
 client/src/views/admin/template-manager/edit.js
 client/src/views/admin/template-manager/index.js
+client/src/views/admin/template-manager/fields/body.js
 client/src/views/admin/inbound-emails.js
 client/src/views/admin/formula-sandbox/index.js
 client/src/views/admin/formula-sandbox/record/edit.js
@@ -1947,6 +1953,7 @@ client/src/views/dashlets/fields/records/sort-direction.js
 client/src/views/dashlets/fields/emails/folder.js
 client/src/views/personal-data/record/record.js
 client/src/views/personal-data/modals/personal-data.js
+client/src/views/auth-log-record/fields/authentication-method.js
 client/src/email-helper.js
 client/src/ui.js
 client/src/acl.js
@@ -2387,7 +2394,12 @@ application/Espo/EntryPoints/ConfirmOptIn.php
 application/Espo/EntryPoints/Avatar.php
 application/Espo/Classes/RecordHooks/Team/BeforeLinkUserCheck.php
 application/Espo/Classes/RecordHooks/Event/BeforeUpdatePreserveDuration.php
+application/Espo/Classes/RecordHooks/Role/BeforeSaveValidate.php
+application/Espo/Classes/FieldSanitizers/StringTrim.php
 application/Espo/Classes/FieldSanitizers/Phone.php
+application/Espo/Classes/FieldSanitizers/ArrayStringTrim.php
+application/Espo/Classes/FieldSanitizers/EmptyStringToNull.php
+application/Espo/Classes/FieldSanitizers/ArrayFromNull.php
 application/Espo/Classes/Select/ActionHistoryRecord/BoolFilters/OnlyMy.php
 application/Espo/Classes/Select/ActionHistoryRecord/AccessControlFilters/OnlyOwn.php
 application/Espo/Classes/Select/Email/Helpers/EmailAddressHelper.php
@@ -4345,6 +4357,7 @@ application/Espo/Tools/UserSecurity/TwoFactor/SmsService.php
 application/Espo/Tools/UserSecurity/Password/Generator.php
 application/Espo/Tools/UserSecurity/Password/RecoveryService.php
 application/Espo/Tools/UserSecurity/Password/Sender.php
+application/Espo/Tools/UserSecurity/Password/Recovery/UrlValidator.php
 application/Espo/Tools/UserSecurity/Password/Service.php
 application/Espo/Tools/UserSecurity/Password/Jobs/RemoveRecoveryRequest.php
 application/Espo/Tools/UserSecurity/Password/Jobs/SendAccessInfo.php
@@ -7120,12 +7133,14 @@ application/Espo/Core/Select/Where/CheckerFactory.php
 application/Espo/Core/Select/Where/DateTimeItemTransformer.php
 application/Espo/Core/Select/Where/ConverterFactory.php
 application/Espo/Core/Select/Where/Params.php
+application/Espo/Core/Select/Where/DefaultDateTimeItemTransformer.php
 application/Espo/Core/Select/Where/Scanner.php
 application/Espo/Core/Select/Where/Item.php
 application/Espo/Core/Select/Where/ItemConverter.php
 application/Espo/Core/Select/Where/Item/Type.php
 application/Espo/Core/Select/Where/Item/Data.php
 application/Espo/Core/Select/Where/Item/Data/DateTime.php
+application/Espo/Core/Select/Where/Item/Data/Date.php
 application/Espo/Core/Select/Where/Checker.php
 application/Espo/Core/Select/Where/Converter.php
 application/Espo/Core/Select/Where/ItemBuilder.php

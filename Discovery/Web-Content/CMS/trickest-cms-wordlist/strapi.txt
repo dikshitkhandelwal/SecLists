@@ -2041,6 +2041,7 @@ packages/core/content-type-builder/admin/src/components/FormModal/tests/reducer.
 packages/core/content-type-builder/admin/src/components/FormModal/tests/reducer.set-custom-field-data-schema.test.ts
 packages/core/content-type-builder/admin/src/components/FormModal/forms/tests/customField.test.ts
 packages/core/content-type-builder/admin/src/components/FormModal/forms/utils/tests/addItemsToFormSections.test.ts
+packages/core/content-type-builder/admin/src/components/FormModal/forms/utils/createCollectionName.ts
 packages/core/content-type-builder/admin/src/components/FormModal/forms/utils/getUsedAttributeNames.ts
 packages/core/content-type-builder/admin/src/components/FormModal/forms/utils/addItemsToFormSection.ts
 packages/core/content-type-builder/admin/src/components/FormModal/forms/forms.ts
@@ -3121,6 +3122,7 @@ packages/core/admin/admin/src/content-manager/pages/ListView/hooks/useAllowedAtt
 packages/core/admin/admin/src/content-manager/pages/ListView/components/Table.tsx
 packages/core/admin/admin/src/content-manager/pages/ListView/components/tests/ViewSettingsMenu.test.tsx
 packages/core/admin/admin/src/content-manager/pages/ListView/components/tests/AdminUsersFilter.test.tsx
+packages/core/admin/admin/src/content-manager/pages/ListView/components/tests/AutoCloneFailureModal.test.tsx
 packages/core/admin/admin/src/content-manager/pages/ListView/components/Filter.tsx
 packages/core/admin/admin/src/content-manager/pages/ListView/components/TableCells/Components.tsx
 packages/core/admin/admin/src/content-manager/pages/ListView/components/TableCells/tests/CellValue.test.tsx
@@ -3138,6 +3140,7 @@ packages/core/admin/admin/src/content-manager/pages/ListView/components/BulkActi
 packages/core/admin/admin/src/content-manager/pages/ListView/components/BulkActions/ConfirmBulkActionDialog.tsx
 packages/core/admin/admin/src/content-manager/pages/ListView/components/BulkActions/SelectedEntriesModal.tsx
 packages/core/admin/admin/src/content-manager/pages/ListView/components/InjectionZoneList.tsx
+packages/core/admin/admin/src/content-manager/pages/ListView/components/AutoCloneFailureModal.tsx
 packages/core/admin/admin/src/content-manager/pages/ListView/components/DialogConfirmDelete.tsx
 packages/core/admin/admin/src/content-manager/pages/ListView/components/ViewSettingsMenu.tsx
 packages/core/admin/admin/src/content-manager/pages/NoPermissionsPage.tsx
@@ -3938,6 +3941,7 @@ docs/docs/docs/01-core/admin/02-permissions/01-how-they-work.mdx
 docs/docs/docs/01-core/admin/05-features/nps.md
 docs/docs/docs/01-core/admin/05-features/authentication.md
 docs/docs/docs/01-core/admin/05-features/hooks/use-admin-roles.mdx
+docs/docs/docs/01-core/admin/05-features/hooks/use-document.mdx
 docs/docs/docs/01-core/admin/05-features/hooks/use-enterprise.mdx
 docs/docs/docs/01-core/admin/05-features/hooks/_category_.json
 docs/docs/docs/01-core/admin/05-features/_category_.json

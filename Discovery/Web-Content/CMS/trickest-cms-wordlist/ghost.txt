@@ -1245,8 +1245,6 @@ ghost/core/test/unit/server/services/themes/validate.test.js
 ghost/core/test/unit/server/services/themes/loader.test.js
 ghost/core/test/unit/server/services/themes/list.test.js
 ghost/core/test/unit/server/services/limits.test.js
-ghost/core/test/unit/server/services/segment/index.test.js
-ghost/core/test/unit/server/services/segment/DomainEventsAnalytics.test.js
 ghost/core/test/unit/server/services/newsletters/service.test.js
 ghost/core/test/unit/server/services/newsletters/index.test.js
 ghost/core/test/unit/server/services/api-version-compatibility/mw-version-rewrites.test.js
@@ -1345,6 +1343,7 @@ ghost/core/test/unit/server/data/importer/importers/data/products.test.js
 ghost/core/test/unit/server/data/importer/importers/data/newsletters.test.js
 ghost/core/test/unit/server/data/importer/importers/data/posts.test.js
 ghost/core/test/unit/server/data/exporter/index.test.js
+ghost/core/test/unit/server/data/db/InstrumentConnectionPool.test.js
 ghost/core/test/unit/server/data/db/backup.test.js
 ghost/core/test/unit/server/data/migrations/utils.test.js
 ghost/core/test/unit/server/data/schema/validator.test.js
@@ -1722,8 +1721,6 @@ ghost/core/core/server/services/email-address/EmailAddressServiceWrapper.js
 ghost/core/core/server/services/lexical-multiplayer/index.js
 ghost/core/core/server/services/lexical-multiplayer/service.js
 ghost/core/core/server/services/lexical-multiplayer/y-websocket.js
-ghost/core/core/server/services/segment/index.js
-ghost/core/core/server/services/segment/DomainEventsAnalytics.js
 ghost/core/core/server/services/newsletters/index.js
 ghost/core/core/server/services/newsletters/NewslettersService.js
 ghost/core/core/server/services/newsletters/emails/verify-email.js
@@ -2178,6 +2175,7 @@ ghost/core/core/server/data/exporter/table-lists.js
 ghost/core/core/server/data/exporter/export-filename.js
 ghost/core/core/server/data/exporter/exporter.js
 ghost/core/core/server/data/db/index.js
+ghost/core/core/server/data/db/ConnectionPoolInstrumentation.js
 ghost/core/core/server/data/db/backup.js
 ghost/core/core/server/data/db/info.js
 ghost/core/core/server/data/db/connection.js
@@ -2982,6 +2980,7 @@ ghost/admin/tests/unit/services/member-stats-test.js
 ghost/admin/tests/unit/services/limit-test.js
 ghost/admin/tests/unit/services/event-bus-test.js
 ghost/admin/tests/unit/helpers/highlighted-text-test.js
+ghost/admin/tests/unit/helpers/most-relevant-subscription-test.js
 ghost/admin/tests/unit/helpers/gh-count-characters-test.js
 ghost/admin/tests/unit/helpers/gh-count-down-characters-test.js
 ghost/admin/tests/unit/helpers/gh-user-can-admin-test.js
@@ -3257,6 +3256,7 @@ ghost/admin/app/helpers/member-fetcher.js
 ghost/admin/app/helpers/is-moment-today.js
 ghost/admin/app/helpers/humanize-recipient-filter.js
 ghost/admin/app/helpers/set-has.js
+ghost/admin/app/helpers/most-relevant-subscription.js
 ghost/admin/app/helpers/gh-count-down-characters.js
 ghost/admin/app/helpers/publish-options.js
 ghost/admin/app/helpers/query-selector.js

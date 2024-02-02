@@ -194,6 +194,7 @@ erpnext/patches/v13_0/reset_clearance_date_for_intracompany_payment_entries.py
 erpnext/patches/v13_0/set_payment_channel_in_payment_gateway_account.py
 erpnext/patches/v13_0/update_dates_in_tax_withholding_category.py
 erpnext/patches/v5_7/update_item_description_based_on_item_master.py
+erpnext/patches/v15_0/create_advance_payment_status.py
 erpnext/patches/v15_0/set_reserved_stock_in_bin.py
 erpnext/patches/v15_0/saudi_depreciation_warning.py
 erpnext/patches/v15_0/create_asset_depreciation_schedules_from_assets.py
@@ -2305,9 +2306,9 @@ erpnext/assets/__init__.py
 erpnext/assets/form_tour/asset_category/asset_category.json
 erpnext/assets/form_tour/asset/asset.json
 erpnext/manufacturing/workspace/manufacturing/manufacturing.json
+erpnext/manufacturing/notification/material_request_receipt_notification/material_request_receipt_notification.html
 erpnext/manufacturing/notification/material_request_receipt_notification/material_request_receipt_notification.py
 erpnext/manufacturing/notification/material_request_receipt_notification/material_request_receipt_notification.json
-erpnext/manufacturing/notification/material_request_receipt_notification/material_request_receipt_notification.md
 erpnext/manufacturing/notification/material_request_receipt_notification/__init__.py
 erpnext/manufacturing/notification/__init__.py
 erpnext/manufacturing/onboarding/manufacturing/manufacturing.json
@@ -2318,6 +2319,9 @@ erpnext/manufacturing/number_card/monthly_completed_work_order/monthly_completed
 erpnext/manufacturing/page/bom_comparison_tool/bom_comparison_tool.json
 erpnext/manufacturing/page/bom_comparison_tool/bom_comparison_tool.js
 erpnext/manufacturing/page/bom_comparison_tool/__init__.py
+erpnext/manufacturing/page/visual_plant_floor/visual_plant_floor.json
+erpnext/manufacturing/page/visual_plant_floor/visual_plant_floor.js
+erpnext/manufacturing/page/visual_plant_floor/__init__.py
 erpnext/manufacturing/page/__init__.py
 erpnext/manufacturing/README.md
 erpnext/manufacturing/report/test_reports.py
@@ -2491,6 +2495,12 @@ erpnext/manufacturing/doctype/production_plan_material_request_warehouse/product
 erpnext/manufacturing/doctype/production_plan_material_request_warehouse/production_plan_material_request_warehouse.json
 erpnext/manufacturing/doctype/production_plan_material_request_warehouse/production_plan_material_request_warehouse.js
 erpnext/manufacturing/doctype/production_plan_material_request_warehouse/__init__.py
+erpnext/manufacturing/doctype/plant_floor/plant_floor.json
+erpnext/manufacturing/doctype/plant_floor/test_plant_floor.py
+erpnext/manufacturing/doctype/plant_floor/stock_summary_template.html
+erpnext/manufacturing/doctype/plant_floor/plant_floor.py
+erpnext/manufacturing/doctype/plant_floor/__init__.py
+erpnext/manufacturing/doctype/plant_floor/plant_floor.js
 erpnext/manufacturing/doctype/production_plan/test_production_plan.py
 erpnext/manufacturing/doctype/production_plan/production_plan.py
 erpnext/manufacturing/doctype/production_plan/production_plan_list.js
@@ -2520,6 +2530,7 @@ erpnext/manufacturing/doctype/workstation/workstation_list.js
 erpnext/manufacturing/doctype/workstation/workstation.js
 erpnext/manufacturing/doctype/workstation/workstation_dashboard.py
 erpnext/manufacturing/doctype/workstation/test_records.json
+erpnext/manufacturing/doctype/workstation/workstation_job_card.html
 erpnext/manufacturing/doctype/workstation/test_workstation.py
 erpnext/manufacturing/doctype/workstation/workstation.json
 erpnext/manufacturing/doctype/workstation/README.md
@@ -2675,7 +2686,7 @@ erpnext/accounts/workspace/accounting/accounting.json
 erpnext/accounts/workspace/financial_reports/financial_reports.json
 erpnext/accounts/workspace/payables/payables.json
 erpnext/accounts/workspace/receivables/receivables.json
-erpnext/accounts/notification/notification_for_new_fiscal_year/notification_for_new_fiscal_year.md
+erpnext/accounts/notification/notification_for_new_fiscal_year/notification_for_new_fiscal_year.html
 erpnext/accounts/notification/notification_for_new_fiscal_year/notification_for_new_fiscal_year.json
 erpnext/accounts/notification/notification_for_new_fiscal_year/notification_for_new_fiscal_year.py
 erpnext/accounts/notification/notification_for_new_fiscal_year/__init__.py
@@ -3920,7 +3931,9 @@ erpnext/public/js/templates/crm_activities.html
 erpnext/public/js/templates/crm_notes.html
 erpnext/public/js/templates/call_link.html
 erpnext/public/js/templates/item_quick_entry.html
+erpnext/public/js/templates/visual_plant_floor_template.html
 erpnext/public/js/templates/item_selector.html
+erpnext/public/js/plant_floor_visual/visual_plant.js
 erpnext/public/js/bank_reconciliation_tool/data_table_manager.js
 erpnext/public/js/bank_reconciliation_tool/number_card.js
 erpnext/public/js/bank_reconciliation_tool/dialog_manager.js
